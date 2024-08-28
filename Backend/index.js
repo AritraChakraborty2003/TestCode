@@ -12,14 +12,14 @@ app.use(cors());
 app.use(bodyParser.json());
 //mongoose.connect("mongodb://127.0.0.1/CodemapcomunityTesting");
 
-const conn = mysql2.createConnection({
+/*const conn = mysql2.createConnection({
   host: "127.0.0.1",
   user: "root",
   password: "AritraCoder@2003",
   database: "codemapcommunity",
   port: 3306, //3001
 });
-
+*/
 app.get("/", (req, res) => {
   const myobj = {
     name: "Aritra",
@@ -29,6 +29,7 @@ app.get("/", (req, res) => {
   res.send(myobj);
 });
 
+/*
 app.patch("/user/update", (req, res) => {
   const email = req.body.email;
   const college = req.body.college;
@@ -81,7 +82,7 @@ app.get("/user", (req, res) => {
       console.log(err);
     });
 });*/
-
+/*
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     var dir = "./uploads";
@@ -115,6 +116,7 @@ app.get("/fileUpload", (req, res) => {
     return res.json(data);
   });
 });
+*/
 
 app.listen(8000, () => {
   console.log("Backend Connected");
