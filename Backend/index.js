@@ -40,8 +40,7 @@ app.patch("/user/update", (req, res) => {
     else return res.status(200).send({ status: 200 });
   });
   */
-});
-
+/*
 app.delete("/user/delete/:id", (req, res) => {
   const email = req.query.email;
  /* const sql = `DELETE FROM user WHERE email='${email}'`;
@@ -49,9 +48,8 @@ app.delete("/user/delete/:id", (req, res) => {
     if (err) console.log(err);
     else return res.status(200).send({ status: 200 });
   });*/
-});
 
-app.post("/user", (req, res) => {
+/*app.post("/user", (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const password = req.body.password;
@@ -64,15 +62,15 @@ app.post("/user", (req, res) => {
       return res.status(200).send({ status: 200 });
     }
   });*/
-});
 
+/*
 app.get("/user", (req, res) => {
  /* const sql = "SELECT * FROM user;";
   conn.query(sql, (err, data) => {
     if (err) console.log(err);
     return res.json(data);
   });*/
-});
+
 
 /*app.get("/user", (req, res) => {
   users
@@ -110,15 +108,14 @@ app.post("/fileUpload", upload.single("file"), (req, res) => {
       return res.status(200).send({ status: 200 });
     }
   });*/
-});
+/*
 app.get("/fileUpload", (req, res) => {
  /* const sql = "SELECT * FROM document;";
   conn.query(sql, (err, data) => {
     if (err) console.log(err);
     return res.json(data);
   });*/
-});
-*/
+
 
 app.listen(8000, () => {
   console.log("Backend Connected");
