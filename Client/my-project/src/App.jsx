@@ -45,7 +45,7 @@ function App() {
     e.preventDefault();
     const email = document.getElementById("email3").value;
     axios
-      .delete(`${import.meta.env.VITE_APP_API_URL}data?email=${email}`, {
+      .delete(`${import.meta.env.VITE_APP_API_URL}user/delete/data?email=${email}`, {
         email: email,
       })
       .then((res) => {
